@@ -1,0 +1,33 @@
+# Contexto permanente
+
+## Proyecto
+- Proyecto en desarrollo: C:\Users\PaulA\OneDrive\Downloads\Github shortwebs\Analisis de encuestas
+- Instalación completa de Metronic 9: C:\Users\PaulA\OneDrive\Downloads\Github shortwebs\metronic-v9.5.0
+- Documentación oficial (consultar primero, antes de revisar archivos de Metronic): https://keenthemes.com/metronic/tailwind/docs/
+- Stack: HTML/JS puro (sin framework backend), usando la plantilla estática de Metronic 9 Tailwind.
+- Backend/base de datos: aún no definidos. Cuando se agreguen, actualizar esta sección con el motor de BD y el lenguaje de backend elegidos.
+- Mapas y filtros espaciales: usar Leaflet como librería de mapas.
+- Convenciones de código: variables, funciones, nombres de archivos y comentarios en inglés; todo el texto visible en la interfaz (labels, botones, mensajes) en español.
+
+## Regla 1 — Usar componentes existentes de Metronic
+Utiliza exclusivamente los componentes existentes de Metronic cuando sea posible.
+No reinventes botones, tablas, menús ni layouts.
+Si existe un componente equivalente en Metronic, intégralo respetando su estructura y estilos.
+
+## Regla 2 — Consultar documentación primero
+Antes de buscar entre los archivos de Metronic 9, consulta la documentación oficial:
+https://keenthemes.com/metronic/tailwind/docs/
+
+## Regla 3 — Flujo al desarrollar una nueva pantalla
+1. Buscar primero si Metronic ya tiene un componente equivalente.
+2. Reutilizarlo:
+   - Revisar los layouts de Metronic.
+   - Identificar la página más parecida.
+   - Reutilizar sus cards, filtros, toolbar y tablas.
+   - Agregar solamente el mapa y los filtros espaciales (lo específico de esta pantalla).
+3. Conservar la estructura de carpetas de Metronic.
+4. No escribir CSS personalizado salvo que sea estrictamente necesario.
+5. Utilizar KeenIcons.
+6. Utilizar ApexCharts cuando haya gráficas.
+7. Utilizar DataTables para tablas grandes.
+8. Mantener compatibilidad con futuras actualizaciones de Metronic.

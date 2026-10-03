@@ -1,0 +1,162 @@
+{
+  "tipo": "unique-value",
+  "campos": [
+    "DISTRITO_L"
+  ],
+  "detalle": [
+    {
+      "fieldValues": [
+        "1"
+      ],
+      "label": "1",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "2"
+      ],
+      "label": "2",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "3"
+      ],
+      "label": "3",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "4"
+      ],
+      "label": "4",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "5"
+      ],
+      "label": "5",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "6"
+      ],
+      "label": "6",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "7"
+      ],
+      "label": "7",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "8"
+      ],
+      "label": "8",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "9"
+      ],
+      "label": "9",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "10"
+      ],
+      "label": "10",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "11"
+      ],
+      "label": "11",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "12"
+      ],
+      "label": "12",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "13"
+      ],
+      "label": "13",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "14"
+      ],
+      "label": "14",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "15"
+      ],
+      "label": "15",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "16"
+      ],
+      "label": "16",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "17"
+      ],
+      "label": "17",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "18"
+      ],
+      "label": "18",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "19"
+      ],
+      "label": "19",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "20"
+      ],
+      "label": "20",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "21"
+      ],
+      "label": "21",
+      "color": "#721e63"
+    },
+    {
+      "fieldValues": [
+        "22"
+      ],
+      "label": "22",
+      "color": "#721e63"
+    }
+  ]
+}

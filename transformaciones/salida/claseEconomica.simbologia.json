@@ -1,0 +1,50 @@
+{
+  "tipo": "unique-value",
+  "campos": [
+    "CLASE_SOCIOECONOMICA"
+  ],
+  "detalle": [
+    {
+      "fieldValues": [
+        "ALTA"
+      ],
+      "label": "ALTA",
+      "color": "#7b3f31"
+    },
+    {
+      "fieldValues": [
+        "MEDIA ALTA"
+      ],
+      "label": "MEDIA ALTA",
+      "color": "#593f46"
+    },
+    {
+      "fieldValues": [
+        "MEDIA"
+      ],
+      "label": "MEDIA",
+      "color": "#255562"
+    },
+    {
+      "fieldValues": [
+        "MEDIA BAJA"
+      ],
+      "label": "MEDIA BAJA",
+      "color": "#1b645e"
+    },
+    {
+      "fieldValues": [
+        "BAJA"
+      ],
+      "label": "BAJA",
+      "color": "#00504e"
+    },
+    {
+      "fieldValues": [
+        "NO DISPONIBLE"
+      ],
+      "label": "NO DISPONIBLE",
+      "color": "#e1e1e1"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "tipo": "unique-value",
+  "campos": [
+    "ENTIDAD"
+  ],
+  "detalle": [
+    {
+      "fieldValues": [
+        "8"
+      ],
+      "label": "8",
+      "color": "#828282"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "tipo": "unique-value",
+  "campos": [
+    "CLASIFICACION"
+  ],
+  "detalle": [
+    {
+      "fieldValues": [
+        "Leal"
+      ],
+      "label": "Leal",
+      "color": "#d15d4b"
+    },
+    {
+      "fieldValues": [
+        "Opositor"
+      ],
+      "label": "Opositor",
+      "color": "#ff443f"
+    },
+    {
+      "fieldValues": [
+        "Switch"
+      ],
+      "label": "Switch",
+      "color": "#ff7f7f"
+    }
+  ]
+}

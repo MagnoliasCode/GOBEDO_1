@@ -1,0 +1,43 @@
+{
+  "tipo": "unique-value",
+  "campos": [
+    "GRS"
+  ],
+  "detalle": [
+    {
+      "fieldValues": [
+        "Muy bajo"
+      ],
+      "label": "Muy bajo",
+      "color": "#ffff73"
+    },
+    {
+      "fieldValues": [
+        "Bajo"
+      ],
+      "label": "Bajo",
+      "color": "#ffff00"
+    },
+    {
+      "fieldValues": [
+        "Medio"
+      ],
+      "label": "Medio",
+      "color": "#e69800"
+    },
+    {
+      "fieldValues": [
+        "Alto"
+      ],
+      "label": "Alto",
+      "color": "#e60000"
+    },
+    {
+      "fieldValues": [
+        "Muy alto"
+      ],
+      "label": "Muy alto",
+      "color": "#4e4e4e"
+    }
+  ]
+}
