@@ -1,0 +1,69 @@
+# Actualizar datos de la encuesta (contexto para Claude)
+
+## Cómo usar este archivo
+Cuando reemplaces "Encuesta GOB EDO 2.xlsx" con datos nuevos, pega en Claude Code:
+
+    Lee "Actualizar datos encuesta.txt" y ejecuta la actualización de datos.
+
+(Opcional: agrega notas como "se agregó la pregunta 3" o "cambió el nombre de una columna".)
+
+---------------------------------------------------------------------------------------------
+
+## Instrucciones para Claude
+
+### Objetivo
+Regenerar los datos del proyecto a partir de "Encuesta GOB EDO 2.xlsx" (raíz del proyecto)
+y verificar que los dashboards sigan funcionando con los datos nuevos.
+
+### Flujo de datos
+    Encuesta GOB EDO 2.xlsx  --(node actualizar_datos.js)-->  data.js  (var datos = [...])
+                                                         \-->  Encuesta GOB EDO 2.csv (copia ligera)
+    data.js  -->  kpis.js (funciones comunes de conteo)
+             -->  index.html     (mapa Leaflet + dl24.js)
+             -->  dashboard.html (+ dashboard.js)
+             -->  resumen.html
+
+- Lee siempre "Contexto permanente.txt" para las reglas del proyecto (Metronic 9, KeenIcons,
+  ApexCharts, código en inglés / interfaz en español).
+- data.js y el CSV se generan solos: NUNCA editarlos a mano.
+- El .xlsx está en .gitignore (trae en caché un libro externo enorme: INE BdD Definitiva.xlsx).
+  NO usar librerías de Excel ni abrirlo completo; actualizar_datos.js lee el .zip a mano
+  y toma el último valor calculado de cada celda. Funciona aunque el Excel esté abierto.
+
+### Pasos
+1. Ejecutar desde la raíz del proyecto:
+       node actualizar_datos.js
+2. Revisar la salida de la consola:
+   - "N registros -> data.js y Encuesta GOB EDO 2.csv": comparar N con la corrida anterior
+     (ver la primera línea de data.js antes de regenerar: trae la fecha de la última corrida).
+   - "Aviso: N registro(s) sin Lat/Lon": normal para teléfonos que no cruzaron con el padrón
+     (no aparecen en el mapa, pero sí cuentan en los KPIs). Reportar el número.
+   - "Aviso: columnas no encontradas en el Excel: ...": un encabezado cambió. Ajustar el
+     arreglo MAPEO_COLUMNAS en actualizar_datos.js (las preguntas se reconocen por su número:
+     "1." -> Preferencia Partido, "2." -> Gubernatura) y volver a correr.
+   - "Error al procesar el Excel": diagnosticar (archivo dañado, guardado a medias, primera
+     hoja equivocada; el script siempre lee la PRIMERA hoja del libro).
+3. Revisar las respuestas nuevas de las preguntas:
+   - Listar los valores distintos de "Preferencia Partido" y "Gubernatura" en data.js.
+   - Si aparece una variante de escritura de una opción ya existente (acentos, mayúsculas,
+     typos), agregarla al objeto RESPUESTAS en actualizar_datos.js y volver a correr.
+   - Si aparece un partido o candidato realmente NUEVO, revisar que kpis.js, dashboard.js,
+     index.html y resumen.html lo muestren (colores, leyendas, listas fijas de opciones).
+   - "-" significa sin respuesta (criterio heredado de la base anterior).
+4. Si el Excel trae preguntas o columnas NUEVAS (p. ej. "3. ..."):
+   - Agregar su mapeo en MAPEO_COLUMNAS y, si es pregunta, su normalización en RESPUESTAS
+     y en construirRegistro().
+   - Proponer (antes de implementarlo) dónde mostrarla en los dashboards, siguiendo
+     "Contexto permanente.txt".
+5. Verificar que las páginas carguen sin errores: abrir index.html, dashboard.html y
+   resumen.html (o revisar con node que data.js sea JS válido y que `datos` sea un arreglo).
+6. Resumir al usuario: registros antes/después, avisos, cambios hechos al script o a las
+   páginas, y cualquier cosa que requiera su decisión.
+7. NO hacer commit ni push salvo que el usuario lo pida. Recordar que data.js y el CSV
+   contienen datos personales (nombres, teléfonos, direcciones).
+
+### Modo automático (opcional, sin Claude)
+    node actualizar_datos.js --vigilar
+Se queda escuchando y regenera data.js cada vez que se guarda el Excel (Ctrl+C para salir).
+Úsalo para cambios de solo datos; llama a Claude cuando cambie la estructura del Excel
+(columnas, preguntas u opciones nuevas) o aparezcan avisos.

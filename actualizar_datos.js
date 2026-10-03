@@ -58,6 +58,7 @@ var RESPUESTAS = {
   'Gubernatura': {
     'marco bonilla': 'Marco Bonilla',
     'alfredo lozoya': 'Alfredo Lozoya',
+    'alfredo chavez': 'Alfredo Lozoya', // en el Excel la opcion de MC se capturo como "Alfredo Chavez"
     'cruz perez cuellar': 'Cruz Pérez Cuellar'
   }
 };
